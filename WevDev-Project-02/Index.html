@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- logo -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="icon" href="main images/favicon_io/favicon-16x16.png">
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="major.html"> -->
+    
+</head>
+<body> 
+    <div id="logo">
+        <img src="favicon_io/android-chrome-192x192.png" alt="LOGO">
+    </div>
+
+    <!-- Search Bar -->
+    <div class="top_med">
+        <div id="sbox">
+            <!-- search bar -->
+        <div class="autocomplete">
+            <input id="myInput" type="text" placeholder="Enter your City">
+            <!-- error massage if entered city is wrong-->
+            <div class="error">
+        <p id="err">Invalid City Name !</p>
+    </div>
+    
+          </div>  
+          <!-- button to search -->
+           <button id="sbtn">
+            <i class="fa-solid fa-magnifying-glass-location i"></i>
+           </button> 
+        </div>
+    
+    </div>
+
+    <!-- Today box -->
+    <div id="today">
+        <div class="now">Now</div>
+        <div class="temp"><span id="temperature-main">30°C</span></div>
+        <div class="weather-cond"><span id="weather-condition">Broken Clouds</span></div>
+        <div id="img" class="temp-icon"></div>
+        <hr size="0" noshade>
+        <div class="date-icon"><i class="fa-solid fa-calendar-day" style="color: #ffffff;"></i></div>
+        <div class="date"><span id="date">-</span></div>
+        <div class="loc-icon"><i class="fa-solid fa-location-dot fa-flip-horizontal"></i></div>
+        <div class="loc"><span id="place_name">New Delhi, IN</span></div>
+    </div>
+
+    
+    <!-- 5 days forecast -->
+    <div id="days">
+        <div class="forecast">5 Days Forecast</div>
+        <div class="days">
+            <div class="day">
+                <div class="temperature-icon"><span id="dayicon1"></span></div>
+                <div class="temperature"><span id="day1">32°C</span></div>
+                <div class="daydate"><span id="daydate1">Tomorrow</span></div>
+                <!-- <div class="weekday"><span>Saturday</span></div> -->
+            </div>
+            <div class="day">
+                <div class="temperature-icon"><span id="dayicon2"></span></div>
+                <div class="temperature"><span id="day2">35°C</span></div>
+                <div class="daydate"><span id="daydate2">Day after Tomorrow</span></div>
+                <!-- <div class="weekday"><span>Sunday</span></div> -->
+            </div>
+            <div class="day">
+                <div class="temperature-icon"><span id="dayicon3"></span></div>
+                <div class="temperature"><span id="day3">36°C</span></div>
+                <div class="daydate"><span id="daydate3">-</span></div>
+                <!-- <div class="weekday"><span>Monday</span></div> -->
+            </div>
+            <div class="day">
+                <div class="temperature-icon"><span id="dayicon4"></span></div>
+                <div class="temperature"><span id="day4">37°C</span></div>
+                <div class="daydate"><span id="daydate4">-</span></div>
+                <!-- <div class="weekday"><span>Tuesday</span></div> -->
+            </div>
+            <div class="day">
+                <div class="temperature-icon"><span id="dayicon5"></span></div>
+                <div class="temperature"><span id="day5">38°C</span></div>
+                <div class="daydate"><span id="daydate5">-</span></div>
+                <!-- <div class="weekday"><span>Saturday</span></div> -->
+            </div>
+        </div>
+    </div>
+     
+    <!-- Today highlights -->
+        <div id="highlights">
+            <div class="th">Today's Highlights</div>
+            
+            <div id="subdiv1">
+            <div id="aqi">
+                <div class="index">Air Quality Index</div>
+                <div class="poll-icon aqi-logo">
+                    <i class="fa-solid fa-wind" style="color: #ffffff;"></i>
+                </div>
+                <div class="pm">PM2.5</div>
+                <div class="pm-value"><span id="pm">3.90</span></div>
+                <div class="so">SO<sub>2</sub></div>
+                <div class="so-value"><span id="so">7.72</span></div>
+                <div class="no">NO<sub>2</sub></div>
+                <div class="no-value"><span id="no">33.6</span></div>
+                <div class="o3">O<sub>3</sub></div>
+                <div class="o3-value"><span id="o3">38.6</span></div>
+            </div>
+            <div id="riseset">
+                <div class="sunrise-sunset">Sunrise & Sunset</div>
+                <div class="sunrise-icon">
+                    <span class="material-symbols-outlined">sunny</span>
+                </div>
+                <div class="sun">Sunrise</div>
+                <div class="risetime"><span id="sunrise">6:46 AM</span></div>
+                <div class="sunset-icon">
+                    <span class="material-symbols-outlined">clear_night</span>
+                </div>
+                <div class="set">Sunset</div>
+                <div class="settime"><span id="sunset">5:39 PM</span></div>
+            </div>
+        </div>
+
+        <div id="subdiv2">
+            <div id="humidity1" class="others">
+                <div class="index1">Humidity</div>
+                <div class="icon"><span class="material-symbols-outlined">
+                    humidity_percentage
+                    </span></div>
+                <div class="value"id="humidity"><span >82%</span></div>
+            </div>
+            <div id="pressure" class="others">
+                <div class="index2">Pressure</div>
+                <div class="icon p">
+                    <span class="material-symbols-outlined">airwave</span>
+                </div>
+                <div class="pressure-value"><span id="air-pressure">1025hPa</span></div>
+            </div>
+            <div id="visibility1" class="others">
+                <div class="index3">Visibility</div>
+                <div class="icon v">
+                    <i class="fa-solid fa-eye" style="color: #ffffff;"></i>
+                </div>
+                <div class="visibility-value"><span id="visibility">10Km</span></div>
+            </div>
+            <div id="feel" class="others">
+                <div class="index4">Feels Like</div>
+                <div class="icon">
+                    <span class="material-symbols-outlined">
+                        thermostat
+                        </span>
+                </div>
+                <div class="feel-value"><span id="temperature">32°C</span></div>
+            </div>
+        </div>
+
+        <!-- Weather at different times -->
+        <div id="time"><p>Today at</p>
+            <div class="today-at">
+            <div class="times time1">
+                <div class="timeshift1" id="shift1">9 AM</div>
+                <div class="timeicon1"><span id="icon1"></span></div>
+                <div class="timetemp1"><span id="tTemp1">28°</span></div>
+            </div>
+            <div class="times time2">
+                <div class="timeshift1" id="shift2">12 PM</div>
+                <div class="timeicon1"><span id="icon2"></span></div>
+                <div class="timetemp1"><span id="tTemp2">30°</span></div>
+            </div>
+            <div class="times time3">
+                <div class="timeshift1" id="shift3">3 PM</div>
+                <div class="timeicon1"><span id="icon3"></span></div>
+                <div class="timetemp1"><span id="tTemp3">31°</span></div>
+            </div>
+            <div class="times time4">
+                <div class="timeshift1" id="shift4">6 PM</div>
+                <div class="timeicon1"><span id="icon4"></span></div>
+                <div class="timetemp1"><span id="tTemp4">29°</span></div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <div class="footerE">
+            <div class="member">
+                <ul>
+                    <h4>Members</h4>
+                    <p>Harsh</p>
+                    <p>Abhishek</p>
+                    <p>Ayush</p>
+                    <p>Aditya</p>
+                </ul>
+            </div>
+
+        <div class="credit">
+            <h3>Credits</h3>
+
+            <div class="cre">
+            <ul>
+
+                <h4>Plan Layout</h4>
+                <p>Harsh, </p>
+                <p>Ayush,</p>
+                <p>Abhishek,</p>
+                <p>Aditya,</p>
+
+            </ul>
+             <ul>
+
+                <h4>Set Up  Development<br> Environment</h4>
+                <p>Aditya,</p>
+                <p>Ayush,</p>
+            </ul>
+
+            <ul>
+                <h4>Create the HTML Structure </h4>
+                <p> Abhishek with <br>(Ayush, Aditya);</p>
+            </ul>
+            <ul>
+                <h4>Style Web Page with CSS </h4>
+                <p>Abhishek with <br> (Harsh, Ayush)</p>
+                
+            
+            </ul>
+        </div><div class="cre">
+            <ul><h4>Add Interactivity <br>
+                 with JavaScript</h4><p>Harsh,</p></ul>
+
+            
+            <ul>
+                <h4>Test and Debug Code </h4>
+                <p> Harsh,</p>
+            </ul>
+            <ul>
+                <h4>Optimize for Performnce </h4>
+                <p> Harsh,</p>
+            </ul>
+            <ul>
+                <h4>Maintain and Update </h4>
+                    <p>Harsh,</p>
+                    <p>Ayush,</p>
+                    <p>Abhishek,</p>
+                    <p>Aditya,</p>
+            </ul> </div></div>
+
+                <ul class="ulf">
+                    <a href="https://www.instagram.com/harsh_jha0?igsh=MWNlY3phMTZyaDBwbw=="><i
+                            class="fa-brands fa-instagram"></i>_harsh_jha0</a>
+                    <a href="https://www.instagram.com/its_aditya1325?igsh=MXAxNm0yNWx3MTg1aQ=="><i
+                            class="fa-brands fa-instagram"></i>_its_aditya1325</a>
+                    <a href="https://www.instagram.com/abhishek__singh__rajput__007?igsh=MWI2azhkNnIzMDlzbw=="><i
+                            class="fa-brands fa-instagram"></i>_abhishek__singh__rajput__007</a>
+                    <a href="https://www.instagram.com/_ayush_p_04_?igsh=YWpjYTkwM2ttNDB0"><i
+                            class="fa-brands fa-instagram"></i>_ayush_p_04_</a>
+                </ul></div>
+                <div class="credits">
+                    <div class="apicredit">Powered by - </div>
+                    <span><img src="https://openweathermap.org/themes/openweathermap/assets/img/logo_white_cropped.png"
+                            alt="open weather">
+                    </span>
+                </div>
+        
+    </footer>
+</body>
+<!-- script file for javaScript -->
+<!-- script file to get output on search  -->
+<script src="script.js"></script>
+<!-- script file to get list in search bar -->
+<script src="test.js"></script>
+<!-- script file to get live location and display live data  -->
+<script src="scripts.js"></script>
+</html>
